@@ -17,7 +17,7 @@ export function checkProps(component, expectedProps) {
   )
 }
 
-export const testStore = (initialState) => {
+export const testStore = initialState => {
   const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore)
   return createStoreWithMiddleware(reducer, initialState)
 }

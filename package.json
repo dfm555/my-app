@@ -14,7 +14,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettify && npm run test:ci "
+      "pre-commit": "pretty-quick --staged && npm run test:ci "
     }
   },
   "dependencies": {
@@ -56,6 +56,7 @@
     "jest-transform-stub": "^2.0.0",
     "plop": "^2.7.4",
     "prettier": "2.1.2",
+    "pretty-quick": "^3.0.2",
     "react-test-renderer": "^16.13.1"
   }
 }

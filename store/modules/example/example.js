@@ -48,5 +48,5 @@ export function remove() {
 
 // side effects, only as applicable
 export function thunk() {
-  return async (dispatch) => dispatch()
+  return async dispatch => dispatch()
 }

@@ -12,7 +12,7 @@ module.exports = {
       message: "where would you like to put this component?",
     },
   ],
-  actions: (data) => {
+  actions: data => {
     const actions = [
       {
         type: "add",
