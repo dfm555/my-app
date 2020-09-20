@@ -1,0 +1,8 @@
+import {{lowerCase name}}Reducer from "./example"
+
+describe("{{lowerCase name}} Reducer", () => {
+	it("Should return default state", () => {
+		const newState = {{lowerCase name}}Reducer(undefined, {})
+		expect(newState).toEqual({ loading: false })
+	})
+})

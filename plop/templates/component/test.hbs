@@ -1,0 +1,35 @@
+import React from "react"
+import { shallow } from "enzyme"
+
+import { findByTestAttr, checkProps } from "utils";
+
+import { {{pascalCase name}} } from "./{{pascalCase name}}"
+
+describe("{{pascalCase name}} Component", () => {
+	describe("Checking PropTypes", () => {
+		it("Should NOT throw a warning", () => {
+      const expectedProps = {
+        example: "Example Text",
+      }
+      const propsError = checkProps({{pascalCase name}}, expectedProps)
+      expect(propsError).toBeUndefined()
+    })
+	})
+
+	describe("Renders", function () {
+    let wrapper;
+    let mockFunc;
+    beforeEach(() => {
+      mockFunc = jest.fn();
+      const props = {
+        example: "Example Text",
+      }
+      wrapper = shallow(<{{pascalCase name}} {...props} />)
+    })
+
+    it("Should render", function () {
+      const component = findByTestAttr(wrapper, "{{pascalCase name}}");
+      expect(component.length).toBe(1);
+    })
+  })
+})

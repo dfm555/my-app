@@ -1,0 +1,23 @@
+import React from "react"
+import {string} from "prop-types"
+import { connect } from "react-redux"
+
+import "./{{lowerCase name}}.less"
+
+export const {{pascalCase name}} = () => {
+    return <div className="{{pascalCase name}}" data-test="{{pascalCase name}}">{{pascalCase name}} Page</div>
+}
+
+{{pascalCase name}}.propTypes = {
+	example: string
+}
+
+export const getStaticProps = async () => {
+	return { props: {} }
+}
+
+const mapStateToProps = state => ({})
+
+const mapDispatchToProps = {}
+
+export default connect(mapStateToProps, mapDispatchToProps)({{pascalCase name}})

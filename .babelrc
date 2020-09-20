@@ -1,0 +1,27 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+	["transform-do-expressions"],
+	[
+	  "module-resolver",
+	  {
+		"root": ["./"],
+		"alias": {
+		  "assets": "./assets",
+		  "components": "./components",
+		  "pages": "./pages",
+		  "public": "./public",
+		  "store": "./store",
+		  "utils": "./utils"
+		}
+	  }
+	],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
+  ]
+}

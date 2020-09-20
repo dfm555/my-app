@@ -1,0 +1,34 @@
+{
+  "description": "Redux Store",
+  "prompts": [
+    {
+      "type": "input",
+      "name": "name",
+      "message": "Enter module name"
+    }
+  ],
+  "actions": [
+    {
+      "type": "add",
+      "path": "store/modules/{{lowerCase name}}/{{lowerCase name}}.js",
+      "templateFile": "plop/templates/store/module.hbs"
+    },
+    {
+      "type": "add",
+      "path": "store/modules/{{lowerCase name}}/{{lowerCase name}}.test.js",
+      "templateFile": "plop/templates/store/test.hbs"
+    },
+    {
+      "type": "append",
+      "path": "store/configureStore.js",
+      "templateFile": "plop/templates/store/storeImport.hbs",
+      "pattern": "/* Plop Generated Imports */"
+    },
+    {
+      "type": "append",
+      "path": "store/configureStore.js",
+      "templateFile": "plop/templates/store/reducerImport.hbs",
+      "pattern": "/* Plop Generated Reducers */"
+    }
+  ]
+}

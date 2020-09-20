@@ -1,0 +1,27 @@
+{
+  "description": "Page Template",
+  "prompts": [
+    {
+      "type": "input",
+      "name": "name",
+      "message": "Enter page name"
+    }
+  ],
+  "actions": [
+    {
+      "type": "add",
+      "path": "pages/{{lowerCase name}}/index.js",
+      "templateFile": "plop/templates/page/page.hbs"
+    },
+    {
+      "type": "add",
+      "path": "pages/{{lowerCase name}}/{{lowerCase name}}.test.js",
+      "templateFile": "plop/templates/page/test.hbs"
+    },
+    {
+      "type": "add",
+      "path": "pages/{{lowerCase name}}/{{lowerCase name}}.less",
+      "templateFile": "plop/templates/page/less.hbs"
+    }
+  ]
+}
