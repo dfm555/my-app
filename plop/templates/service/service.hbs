@@ -1,0 +1,25 @@
+import http from 'utils/http-common'
+
+class {{camelCase name}}Service {
+  getAll() {
+    return http.get("/{{camelCase name}}s");
+  }
+
+  get(id) {
+    return http.get(`/{{camelCase name}}s/${id}`);
+  }
+
+  create(data) {
+    return http.post("/{{camelCase name}}s", data);
+  }
+
+  update(id, data) {
+    return http.put(`/{{camelCase name}}s/${id}`, data);
+  }
+
+  delete(id) {
+    return http.delete(`/{{camelCase name}}s/${id}`);
+  }
+}
+
+export default new {{camelCase name}}Service();

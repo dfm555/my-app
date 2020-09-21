@@ -4,7 +4,6 @@ import { createLogger } from "redux-logger"
 import ReduxThunk from "redux-thunk"
 import { composeWithDevTools } from "redux-devtools-extension"
 /* Plop Generated Imports */
-import example from "./modules/example/example"
 
 const loggerMiddleware = createLogger() // initialize logger
 
@@ -16,7 +15,6 @@ const createStoreWithMiddleware = composeWithDevTools(
 
 export const reducer = combineReducers({
   /* Plop Generated Reducers */
-  example,
 })
 
 let store
